@@ -422,6 +422,8 @@
 	font-size: 160%;
 	margin-right: 20px;
 	color: rgba(0,0,0,0.3);
+
+	-webkit-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
 
 }
@@ -678,7 +680,7 @@
     -webkit-transition-duration: 0.8s;
     -moz-transition-duration: 0.8s;
     -o-transition-duration: 0.8s;
-    transition-duration: infinite;   
+    transition-duration: 0.8s;   
     
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
@@ -718,11 +720,6 @@
 
 .lines-button:hover {
 	opacity: 1;
-}
-
-.lines-button:active {
-	-webkit-transition: 0;
-	transition: 0;
 }
 
 .lines {
