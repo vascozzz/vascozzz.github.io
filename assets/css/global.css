@@ -1,0 +1,749 @@
+/*################################################################################################################################
+ * Utilities
+ *
+ * Colors:
+ * white: #fff;
+ * main-pink: #df2e50;
+ * brown-ish: #381D2A;
+ * headers-purple: #474252;
+ * 
+ *################################################################################################################################*/
+
+.vertical-center {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+}
+
+/*################################################################################################################################
+ * Fonts
+ *################################################################################################################################*/
+
+@font-face {
+    font-family: 'coolvetica';
+    src: url('../fonts/coolvetica_rg-webfont.eot');
+    src: url('../fonts/coolvetica_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/coolvetica_rg-webfont.woff') format('woff'),
+         url('../fonts/coolvetica_rg-webfont.ttf') format('truetype'),
+         url('../fonts/coolvetica_rg-webfont.svg#coolveticaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*################################################################################################################################
+ * Navbar
+ *################################################################################################################################*/
+
+.navbar {
+	transition: all 0.7s ease 0s;
+}
+
+.navbar .navbar-container {
+	padding-top: 20px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.navbar #navbar-title {
+	color: #fff;
+	padding: 0px;
+	text-transform: uppercase;
+}
+
+.navbar #navbar-title span {
+	font-weight: 900;
+}
+
+.navbar .navbar-nav li {
+	padding-right: 34px;
+	padding-left: 34px;
+}
+
+.navbar .navbar-nav li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 97%;
+	color: #fff;
+	padding: 2px;
+	padding-top: 3px;
+	font-size: 88%;
+	outline: 0;
+}
+
+.navbar .navbar-nav li:hover a {
+	background-color: transparent;
+	color: #df2e50;
+	transition: all 0.3s ease 0s;
+}
+
+/* edits the active section on the navbar; ie: Home */
+.navbar .navbar-nav > .active > a, 
+.navbar .navbar-nav > .active > a:hover, 
+.navbar .navbar-nav > .active > a:focus {
+	color: #df2e50;
+	border: none;
+}
+
+/* make sure that the background is transparent on every transition */
+.navbar .navbar-nav li a:focus,
+.navbar .navbar-nav li a:active {
+	background-color: transparent;
+}
+
+/*################################################################################################################################
+ * Collapsed navbar (mobile)
+ *################################################################################################################################*/
+
+.fullscreen .modal-dialog {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    color: #333;
+    font-family: "Open Sans", sans-serif;
+}
+
+.fullscreen .modal-content {
+    height: 100%;
+    border-radius: 0;
+    color: #333;
+    background: #df2e50;
+}
+
+.fullscreen .modal-header {
+	padding: 0;
+	min-height: 0;
+}
+
+.fullscreen .modal-body {
+	height: 100%;
+}
+
+.fullscreen .modal-body ul {
+    /*padding: 100px 0 0 0;*/
+    list-style-type: none;
+    overflow: auto;
+}
+
+.fullscreen .modal-body li {
+    padding: 10px 0 10px 0 ;
+}
+
+.fullscreen .modal-body a {
+    color: #333;
+    font-size: 300%;
+}
+
+@media (max-width: 767px) {
+	.navbar {
+		z-index: 2000;
+	}
+}
+
+@media (max-width: 480px){
+    .fullscreen .modal-body ul {
+        padding: 30px 0 0 0;
+        overflow: auto;
+    }
+
+    .fullscreen .modal-body li {
+        padding: 4px 0 4px 0;
+    }
+}
+
+/*################################################################################################################################
+ * Collapsed navbar (on scroll)
+ *################################################################################################################################*/
+
+@media (min-width: 767px) {
+	.top-nav-collapse {
+		padding-top: 20px;
+		padding-bottom: 10px;
+		background-color: rgba(0,0,0,0.2);
+		/*background-color: #df2e50;
+		border-bottom: 2px solid rgba(255,255,255,0.7);*/
+	}
+}
+
+@media (max-width: 767px) {
+	.top-nav-collapse .lines-button .lines {
+		opacity: 0;
+	}
+}
+
+/*################################################################################################################################
+ * Intro Section: structure
+ *################################################################################################################################*/
+
+#intro {
+	height: 100vh;
+    width: 100%;
+	background-color: #fff;
+	background-image: url("../img/background.jpg");
+	background-position: center top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#intro .background-pattern {
+	height: 100%;
+	width: 100%;
+	background-image: url("../img/background-pattern.png");
+}
+
+#intro .container-fluid {
+	height: 100%;
+	margin: 0px auto;
+}
+
+#intro .row {
+	height: 100%;
+}
+
+/*################################################################################################################################
+ * Intro Section: body
+ *################################################################################################################################*/
+
+#intro-body {
+	
+}
+
+#intro-body .intro-pink {
+	color: #df2e50;
+}
+
+#intro-body .intro-white {
+	color: #fff;
+}
+
+#intro-body .intro-body-header {
+	border-top: 1px solid #fff;
+	width: 100%;
+	border-top: 1px solid #fff;
+	opacity: 0.95;
+}
+
+#intro-body .intro-body-header h1,
+#intro-body .intro-body-header p {
+	-webkit-transform: translate3d(0,40px,0);
+	transform: translate3d(0,40px,0);
+}
+
+#intro-body .intro-body-header h1 {
+	position: relative;	
+	font-family: "coolvetica";
+	font-size: 900%;
+	text-transform: uppercase;
+	margin-top: -4%;
+	cursor: pointer;	
+	
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;	
+
+	-webkit-user-select: none; 
+	-khtml-user-select: none; 
+	-moz-user-select: none; 
+	-o-user-select: none;
+}
+
+#intro-body .intro-body-header h1:first-of-type {
+	margin-top: 0px;
+}
+
+#intro-body .intro-body-header p {
+	opacity: 0;
+	color: #fff;	
+	font-size: 130%;
+	margin-top: -3%;
+	
+	-webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+	transition: opacity 0.2s, transform 0.35s;
+}
+
+#intro-body .intro-body-header p span {
+	font-weight: bold;	
+}
+
+#intro-body .intro-body-header:hover h1,
+#intro-body .intro-body-header:hover p {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+#intro-body .intro-body-header:hover p {
+	opacity: 0.8;
+	
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+	-webkit-transition-duration: 0.35s;
+	transition-duration: 0.35s;
+}
+
+/* mobile intro only */
+@media (max-width: 767px) {
+	#intro-body {
+		text-align: center;
+	}
+}
+
+/*################################################################################################################################
+ * Intro Section: right sidebar
+ *################################################################################################################################*/
+
+#intro-side-nav ul {
+	float: right;
+	margin-bottom: 0px;
+	margin-right: 20px;
+	list-style-type: none;
+}
+
+#intro-side-nav ul li {
+	text-align: right;
+	margin-bottom: 25px;
+}
+
+#intro-side-nav ul li:last-child {
+	margin-bottom: 0px;
+}
+
+#intro-side-nav ul li a {
+	height: 22px;
+	width: 22px;
+	border-radius: 50%;
+	display: inline-block;
+	background-image: url("../img/intro-side-nav-symbol.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	transition: all 0.3s ease;
+}
+
+#intro-side-nav ul li:first-child a {
+	background-image: url("../img/intro-side-nav-symbol-active.png");
+}
+
+/*################################################################################################################################
+ * Intro Section: scroll down
+ *################################################################################################################################*/
+
+#intro .scroll-down {
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+    bottom: 10px; 
+}
+
+#intro .scroll-down a {
+	font-size: 280%;
+    color: rgba(255,255,255,0.45);
+    outline: 0;
+}
+
+#intro .scroll-down:hover a {
+    color: rgba(255,255,255,0.85);
+    transition: all 0.3s ease 0s;
+}
+
+/*################################################################################################################################
+ * Sections: global
+ *################################################################################################################################*/
+
+.content-section {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	background-color: #f7f7f6;
+	/*border-bottom: 1px solid rgba(0,0,0,0.2);*/
+	font-family: "Open Sans", sans-serif;
+}
+
+.content-section .section-header {
+	position: relative;
+	padding-bottom: 20px;
+	margin-bottom: 40px;
+}
+
+.content-section .section-header:after {
+	position: absolute;
+	content: "";
+	bottom: 0px;
+	height: 1px;
+	width: 120px;
+	background-color: #df2e50;
+}
+
+.content-section .section-header h1 {
+	margin: 0px;
+	font-family: "coolvetica";
+	font-size: 500%;
+	text-transform: uppercase;
+	color: #474252;
+}
+
+.content-section .section-header h3 {
+	margin: 0px;
+}
+
+@media(max-width: 767px) {
+	.content-section {
+		padding-left: 8%;
+		padding-right: 8%;
+	}
+}
+
+/*################################################################################################################################
+ * About Section
+ *################################################################################################################################*/
+
+#about {	
+	padding-top: 120px;
+	border-top: 3px solid rgba(0,0,0,0.2);
+}
+
+#about .info {
+	text-align: justify;
+}
+
+#about .info .about-icons .fa {
+	margin-top: 40px;
+}
+
+#about .info .about-icons .fa {
+	font-size: 160%;
+	margin-right: 20px;
+	color: rgba(0,0,0,0.3);
+	transition: all 0.3s ease 0s;
+
+}
+
+#about .info .about-icons .fa:hover {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#about .info .about-icons #in-icon:hover {
+	color: #007bb6;
+}
+
+#about .info .about-icons #fb-icon:hover {
+	color: #3b5999;
+}
+
+#about .info .about-icons #plus-icon:hover {
+	color: #da4835;
+}
+
+#about .info .about-icons #tweet-icon:hover {
+	color: #00acee;
+}
+
+#about .info .about-icons #git-icon:hover {
+	color: #171515;
+}
+
+#about .info .about-icons #mail-icon:hover {
+	color: #df2e50;
+}
+
+#about .picture .picture-container {
+	height: 350px;
+	width: 168px;
+	margin: 0 auto;
+	position: relative;
+	background-image: url("../img/iphone_render.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+#about .picture .picture-cover {
+	height: 182px;
+	width: 138px;
+	position: absolute;
+	top: 71px;
+	left: 15px;
+	background-image: url("../img/iphone_cover.png"), url("../img/iphone_cover.png"), url("../img/iphone_cover.png"), url("../img/iphone_cover.png"), url("../img/iphone_picture.png");
+    background-repeat: no-repeat;
+    background-position: -65px -50px, 45px 50px, -65px 50px, 45px -50px, 0px 0px;
+    background-size: 160px 160px, 160px 160px, 160px 160px, 160px 160px, contain;
+
+    -webkit-transition: background-position 1s ease;
+    -moz-transition: background-position 1s ease;
+    -o-transition: background-position 1s ease;
+    -ms-transition: background-position 1s ease;
+    transition: background-position 1s ease;
+}
+
+#about .picture .reveal {
+    background-position: -200px -200px, 200px 200px, -200px 200px, 200px -200px,  0px 0px;  
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+	#about .picture {
+		padding-top: 40px;
+	}
+}
+
+/*################################################################################################################################
+ * Services Section
+ *################################################################################################################################*/
+
+#services {
+ 	font-weight: 300;
+}
+
+#services .languages {
+	text-align: center;
+}
+
+#services .languages span {
+	display: inline-block;
+	font-size: 75%;
+	color: #fff;
+	border-radius: 0.5em;
+	background-color: #381D2A;
+	margin-right: 5px;
+ 	padding: 1px 8px;
+}
+
+/*################################################################################################################################
+ * Experience Section
+ *################################################################################################################################*/
+
+#experience {
+
+}
+
+#experience .section-header {
+	text-align: center;
+}
+
+#experience .section-header:after {
+	position: static;
+	display: block;
+	margin: 20px auto;
+}
+
+#experience .about-experience .area {
+	text-align: center;
+	height: 200px;
+	padding-top: 90px;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	border-right: 1px solid rgba(0,0,0,0.05);
+	background-color: rgba(0,0,0,0.05);
+	transition: all 0.3s ease 0s;
+}
+
+#experience .about-experience .area:first-child {
+	border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+#experience .top-row .area {
+	border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+#experience .about-experience .area:hover {
+	background-color: #fff;
+}
+
+#experience .test > div > div {
+	text-align: center;
+	height: 200px;
+	padding-top: 90px;
+	border: 1px solid rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,0.05);
+	transition: all 0.3s ease 0s;
+}
+
+/*################################################################################################################################
+ * Contact Section
+ *################################################################################################################################*/
+
+#contact {
+	/*background-image: url('../img/congruent_pentagon.png');*/
+	padding-bottom: 120px;
+}
+
+#contact .section-header {
+	text-align: right;
+}
+
+#contact .section-header:after {
+	right: 0;
+}
+
+#contact .contact-info {
+	font-size: 118%;
+	font-weight: 300;
+	color: #474252;
+	text-align: right;
+	padding-top: 115px;
+}
+
+#contact .contact-info span {
+	width: 30px;
+	text-align: center;
+}
+
+#contact #map-container {
+	height: 370px;
+}
+
+#contact .map-zoom {
+	background-color: #DF2E50;
+	margin: 10px 0px 2px 10px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+}
+
+#contact .map-zoom:hover {
+	cursor: pointer;
+}
+
+#contact .map-address {
+	position: absolute;
+	bottom: 0px;
+	width: calc(100% - 30px);
+	background-color: #df2e50;
+	text-align: center;
+	color: #fff;
+	padding: 10px 0px;
+}
+
+#contact .map-address .address {
+	font-weight: 300;
+	margin-left: 10px;
+}
+
+/*################################################################################################################################
+ * Footer
+ *################################################################################################################################*/
+
+#footer {
+	font-family: "Open Sans", sans-serif;
+	text-align: center;
+	font-size: 120%;
+	padding: 20px 0px;
+	background-color: #f7f7f6;
+}
+
+/*################################################################################################################################
+ * Animations
+ *################################################################################################################################*/
+
+/* opacity, and not display, is used so that elements still occupy their space */
+.scroll-animate {
+	opacity: 0;
+}
+
+.scroll-animate.animated {
+	opacity: 1;
+}
+
+/* by default, elements that are going to be animated on scroll are hidden; this class can be set to override that behaviour*/
+.scroll-animate.scroll-visible {
+	opacity: 1;
+}
+
+.hover-rotate {
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: infinite;   
+    
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;    
+    
+    overflow: hidden;
+}  
+ 
+.hover-rotate:hover {
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    -ms-transform: rotate(360deg);
+}
+
+/*################################################################################################################################
+ * Navbar cross animation
+ *################################################################################################################################*/
+
+.lines-button {
+	padding: 2rem 1rem;
+	transition: .3s;
+	cursor: pointer;
+	user-select: none;
+	border-radius: 0.57143rem;
+	background: none;
+	border: none;
+}
+
+.lines-button:hover {
+	opacity: 1;
+}
+
+.lines-button:active {
+	transition: 0;
+}
+
+.lines {
+	display: inline-block;
+	width: 4rem;
+	height: 0.57143rem;
+	background: #fff;
+	border-radius: 0.28571rem;
+	position: relative;
+	transition: 0.3s;
+	transition: opacity 1s;
+}
+
+.lines:before, .lines:after {
+	display: inline-block;
+	width: 4rem;
+	height: 0.57143rem;
+	background: #fff;
+	border-radius: 0.28571rem;
+	transition: 0.3s;
+	position: absolute;
+	left: 0;
+	content: '';
+	-webkit-transform-origin: 0.28571rem center;
+	transform-origin: 0.28571rem center;
+}
+
+.lines:before {
+	top: 1rem;
+}
+
+.lines:after {
+	top: -1rem;
+}
+
+.lines-button.open .lines {
+	background: transparent;
+}
+
+.lines-button.open .lines:before, .lines-button.open .lines:after {
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	top: 0;
+	width: 4rem;
+}
+
+.lines-button.open .lines:before {
+	-webkit-transform: rotate3d(0, 0, 1, 45deg);
+	transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.lines-button.open .lines:after {
+	-webkit-transform: rotate3d(0, 0, 1, -45deg);
+	transform: rotate3d(0, 0, 1, -45deg);
+}
