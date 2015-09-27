@@ -126,6 +126,7 @@
 
 .fullscreen .modal-body ul {
     /*padding: 100px 0 0 0;*/
+    padding: 0;
     list-style-type: none;
     overflow: auto;
 }
@@ -191,7 +192,7 @@
 	background-size: cover;
 }
 
-#intro .background-pattern {
+#intro .intro-overlay {
 	height: 100%;
 	width: 100%;
 	background-image: url("../img/background-pattern.png");
@@ -408,6 +409,7 @@
 #about {	
 	padding-top: 120px;
 	border-top: 3px solid rgba(0,0,0,0.2);
+	/* background-image: url("../img/poly-background-1.png"); */
 }
 
 #about .info {
@@ -538,48 +540,13 @@
 	margin: 20px auto;
 }
 
-#experience .about-experience .area {
-	text-align: center;
-	height: 200px;
-	padding-top: 90px;
-	border-bottom: 1px solid rgba(0,0,0,0.2);
-	border-right: 1px solid rgba(0,0,0,0.05);
-	background-color: rgba(0,0,0,0.05);
-	
-	-webkit-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
-}
-
-#experience .about-experience .area:first-child {
-	border-left: 1px solid rgba(0,0,0,0.1);
-}
-
-#experience .top-row .area {
-	border-top: 1px solid rgba(0,0,0,0.05);
-}
-
-#experience .about-experience .area:hover {
-	background-color: #fff;
-}
-
-#experience .test > div > div {
-	text-align: center;
-	height: 200px;
-	padding-top: 90px;
-	border: 1px solid rgba(0,0,0,0.7);
-	background-color: rgba(0,0,0,0.05);
-	
-	-webkit-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
-}
-
 /*################################################################################################################################
  * Contact Section
  *################################################################################################################################*/
 
 #contact {
-	/*background-image: url('../img/congruent_pentagon.png');*/
 	padding-bottom: 120px;
+	/*background-image: url("../img/poly-background-1.png");*/
 }
 
 #contact .section-header {
