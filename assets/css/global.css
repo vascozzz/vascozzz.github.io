@@ -461,6 +461,10 @@
 	color: #df2e50;
 }
 
+#about .info .about-icons #cv-icon:hover {
+	color: #474252;
+}
+
 #about .picture .picture-container {
 	height: 350px;
 	width: 168px;
